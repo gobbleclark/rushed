@@ -1,0 +1,35 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "d481be8ee8d428ceeb4c1af67601caeb"
+name = "Priority Handling"
+application_url = "https://pin-contests-computers-calendar.trycloudflare.com"
+embedded = true
+handle = "priority-handling"
+
+[access_scopes]
+scopes = "read_products,write_products,read_orders,write_orders"
+
+[webhooks]
+api_version = "2025-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app_subscriptions/update" ]
+  uri = "/webhooks/app/subscription_update"
+
+[auth]
+redirect_urls = ["https://pin-contests-computers-calendar.trycloudflare.com/auth/callback", "https://pin-contests-computers-calendar.trycloudflare.com/auth/shopify/callback", "https://pin-contests-computers-calendar.trycloudflare.com/api/auth/callback"]
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
