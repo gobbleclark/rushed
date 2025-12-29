@@ -55,7 +55,7 @@
     "prisma": "^6.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite-tsconfig-paths": "^5.0.1",
+    "vite-tsconfig-paths": "^6.0.1",
     "vitest": "^3.2.4"
   },
   "devDependencies": {
@@ -71,7 +71,7 @@
     "prettier": "^3.2.4",
     "tsx": "^4.20.5",
     "typescript": "^5.2.2",
-    "vite": "^6.2.2"
+    "vite": "^7.2.7"
   },
   "engines": {
     "node": "^18.20 || ^20.10 || >=21.0.0"
